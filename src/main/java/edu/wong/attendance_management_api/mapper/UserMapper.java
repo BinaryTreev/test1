@@ -8,14 +8,6 @@ import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
-/**
- * <p>
- * Mapper 接口
- * </p>
- *
- * @author WongSilver
- * @since 2022-03-20
- */
 public interface UserMapper extends BaseMapper<User> {
 
     @Select("select * from view_user_info where user_id = #{id}")

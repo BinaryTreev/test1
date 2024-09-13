@@ -162,24 +162,31 @@ public class UserController {
         return ResponseFormat.successful(mapper.deleteBatchIds(ids));
     }
 
+    //    导出用户数据
     @GetMapping("/export")
     public void ExportExcel(HttpServletResponse response) throws IOException {
-        List<User> list = service.list();        //查询所有用户数据
-//        写到浏览器
-//        使用下面注解可以不用起别名
-//        @Alias("XXXX")
+        List<User> list = service.list();        // 查询所有用户数据
+
+        // 使用下面注解可以不用起别名
+        // @Alias("XXXX")
         ExcelWriter writer = ExcelUtil.getWriter(true);
         writer.write(list, true);
 
-//        通用的格式
+        // 设置响应的内容类型及文件头
         response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8");
         response.setHeader("Content-Disposition", "attachment;filename=" + URLEncoder.encode("用户信息", "UTF-8") + ".xlsx");
+
+        // 获取输出流并写入 Excel 数据
         ServletOutputStream out = response.getOutputStream();
         writer.flush(out, true);
+
+        // 关闭流
         out.close();
         writer.close();
     }
 
+
+    //    导入用户数据
     @PostMapping("/import")
     public boolean importExcel(MultipartFile file) throws IOException {
         InputStream stream = file.getInputStream();
@@ -202,6 +209,7 @@ public class UserController {
         return ResponseFormat.operate(400, "未查询到用户", null);
     }
 
+    //    获取用户总数
     @GetMapping("/total")
     public ResponseFormat getTotal() {
         List<User> list = service.list();

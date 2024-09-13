@@ -15,14 +15,6 @@ import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-/**
- * <p>
- *
- * </p>
- *
- * @author WongSilver
- * @since 2022-03-20
- */
 @Data
 @ToString
 @NoArgsConstructor

@@ -15,14 +15,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * <p>
- * 前端控制器
- * </p>
- *
- * @author WongSilver
- * @since 2022-03-20
- */
 @RestController
 @RequestMapping("/right")
 public class RightController {

@@ -8,27 +8,20 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.List;
 
-/**
- * <p>
- * 前端控制器
- * </p>
- *
- * @author WongSilver
- * @since 2022-03-20
- */
-
 @RestController
 @RequestMapping("/roleRight")
 public class RoleRightController {
     @Resource
     IRoleRightService service;
 
+    // 获取角色已选权限
     @GetMapping("/checkedRight/{id}")
     public ResponseFormat checkedRight(@PathVariable Integer id) {
         List<Integer> list = service.getRightList(id);
         return ResponseFormat.successful(list);
     }
 
+    // 设置角色权限
     @PostMapping("/setRoleRight")
     public ResponseFormat setRoleRight(@RequestBody RoleRightDTO dto) {
         if (dto.getRoleId() == 1) {

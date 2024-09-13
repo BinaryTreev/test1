@@ -11,14 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 
-/**
- * <p>
- * 前端控制器
- * </p>
- *
- * @author WongSilver
- * @since 2022-03-20
- */
 @RestController
 @RequestMapping("/userRole")
 public class UserRoleController {

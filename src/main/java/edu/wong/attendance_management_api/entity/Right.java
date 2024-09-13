@@ -13,15 +13,6 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-/**
- * <p>
- *
- * </p>
- *
- * @author WongSilver
- * @since 2022-03-20
- */
-
 @Data
 @ToString
 @NoArgsConstructor

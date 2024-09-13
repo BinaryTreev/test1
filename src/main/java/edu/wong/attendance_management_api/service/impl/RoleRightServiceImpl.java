@@ -13,14 +13,6 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <p>
- * 服务实现类
- * </p>
- *
- * @author WongSilver
- * @since 2022-03-20
- */
 @Service
 public class RoleRightServiceImpl extends ServiceImpl<RoleRightMapper, RoleRight> implements IRoleRightService {
 

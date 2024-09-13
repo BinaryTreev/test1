@@ -10,14 +10,6 @@ import lombok.ToString;
 
 import java.io.Serializable;
 
-/**
- * <p>
- *
- * </p>
- *
- * @author WongSilver
- * @since 2022-03-20
- */
 @Data
 @ToString
 @NoArgsConstructor

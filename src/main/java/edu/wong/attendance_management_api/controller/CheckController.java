@@ -16,14 +16,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-/**
- * <p>
- * 前端控制器
- * </p>
- *
- * @author WongSilver
- * @since 2022-03-20
- */
 @RestController
 @RequestMapping("/check")
 public class CheckController {
